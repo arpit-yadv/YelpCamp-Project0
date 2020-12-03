@@ -1,0 +1,36 @@
+<%- include ('partials/header') %>
+
+<div class="container ">
+    <h1>Welcome Create the new Campground!!</h1>
+    <div class="row justify-content-center">
+        <div class="col-lg-4 ">
+            <form action="/campgrounds" method="POST">
+                <div class="form-group">
+                    <label for="NameofCamp">Name of Camp</label>
+                    <input type="text" class="form-control" name="newName" id="NameofCamp" aria-describedby="emailHelp">
+                    <small id="emailHelp" class="form-text text-muted">Your Contribution in building this database is commendable</small>
+                </div>
+                <div class="form-group">
+                    <label for="ImageUrl">ImageUrl</label>
+                    <input type="text" class="form-control" name="newUrl" id="ImageUrl">
+                </div>
+                <div class="form-group">
+                    <label for="Description">Description</label>
+                    <input type="text" class="form-control" name="description" id="Description">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary form-control">Submit</button>
+                </div>
+                
+            </form>
+            <a class="m-3" href="/campgrounds ">Go back</a>
+        </div>
+    </div>
+
+      
+</div>
+
+
+
+
+<%- include ('partials/footer') %>

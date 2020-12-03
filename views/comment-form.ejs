@@ -1,0 +1,42 @@
+<%- include('partials/header') %>
+
+
+<h1> this is the campId <%=campId%></h1>
+
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-lg-5">
+            <form action="/campgrounds/<%= campId %>" method="POST">
+                <div class="form-group" >
+                  <label for="exampleFormControlInput1">Email address</label>
+                  <input type="email" class="form-control" name="newEmail" id="exampleFormControlInput1" placeholder="name@example.com">
+                </div>
+                <div class="form-group">
+                  <label for="exampleFormControlInput1">Name</label>
+                  <input type="Name" class="form-control" name="newName" id="exampleFormControlInput1" placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                  <label for="exampleFormControlTextarea1">Comment</label>
+                  <textarea class="form-control" name="newComment" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+
+        </div>
+            
+    
+
+    </div>
+    
+
+</div>
+
+
+
+
+
+
+
+
+  
+<%- include('partials/footer') %>

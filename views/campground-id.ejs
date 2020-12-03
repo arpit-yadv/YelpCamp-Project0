@@ -1,0 +1,37 @@
+<%- include('partials/header') %>
+
+
+<div class="container-fluid p-sm-4 p-lg-3 text-lg-center">
+    <div class="jumbotron bg-transparent">
+      <%  campgrounds.forEach(function(campground){ %>
+
+        <h1 class="display-3">Welcome to <%=campground.name %></h1>
+        <img src="<%=campground.image%>" class="img-thumbnail" alt="Responsive image">
+        <p class="lead">One of the best places to visit in it's period</p>
+        <hr class="my-2">
+        <p class="lead">
+            <p><%= campground.description %></p>
+            <p class=" text-xl-center ">Comments</p>
+            <p><% campground.comments.forEach(function(comment){ %>
+                <p><%=comment.email %> - <%=comment.text%> </p> 
+                    
+                <%  })  %></p>
+                <a href="/campgrounds/<%= campground._id %>/comment/new" class=" btn btn-success">Add Comment</a>
+
+            <a class="btn btn-primary btn-lg" href="/new" role="button">Add new Campground</a>
+        <p/>
+    <%})%>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<%- include('partials/footer') %>
